@@ -1,12 +1,18 @@
 name: expense
 networks:
   default:
-    name: sulakaya
+    name: pineapple
+volumes:
+  sudheer:
 
 services:
     mysql:
       image: mysql:v.10.0
       container_name: mysql
+      volumes:
+      -source: sudheer
+      target: var/lib/mysql
+      type: volumes
 
     backend:
       image: backend:v.10.0
