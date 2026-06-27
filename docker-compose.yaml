@@ -4,6 +4,7 @@ networks:
     name: pineapple
 volumes:
   sudheer:
+  external: true
 
 services:
     mysql:
