@@ -10,9 +10,9 @@ services:
       image: mysql:v.10.0
       container_name: mysql
       volumes:
-      -source: sudheer
-      target: var/lib/mysql
-      type: volumes
+        -source: sudheer
+        target: var/lib/mysql
+        type: volumes
 
     backend:
       image: backend:v.10.0
