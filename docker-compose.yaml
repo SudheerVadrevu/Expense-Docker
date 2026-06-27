@@ -10,7 +10,7 @@ services:
       image: mysql:v.10.0
       container_name: mysql
       volumes:
-        -source: sudheer
+      - source: sudheer
         target: var/lib/mysql
         type: volumes
 
