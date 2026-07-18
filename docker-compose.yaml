@@ -18,17 +18,17 @@ services:
     backend:
       image: backend:v.10.0
       container_name: backend
-      command: sh -c "sleep 50 && node /opt/server/index.js"
+      command: sh -c "sleep 28 && node /opt/server/index.js" 
       depends_on: 
-      - mysql
+       - mysql
 
     frontend:
       image: frontend:v.10.0
       container_name: frontend
       depends_on: 
-      - backend
+       - backend
       ports:
-      - "80:80"
+       - "80:80"
 
   
 
