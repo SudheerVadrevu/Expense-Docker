@@ -8,7 +8,8 @@ volumes:
 
 services:
     mysql:
-      image: mysql:v.10.0
+      #image: mysql:v.10.0
+      image: sudheer1995/mysql:waste
       container_name: mysql
       volumes:
       - source: sudheer
@@ -16,14 +17,16 @@ services:
         type: volume
 
     backend:
-      image: backend:v.10.0
+      #image: backend:v.10.0
+      image: sudheer1995/backend:waste
       container_name: backend
       command: sh -c "sleep 28 && node /opt/server/index.js" 
       depends_on: 
        - mysql
 
     frontend:
-      image: frontend:v.10.0
+      #image: frontend:v.10.0
+      image: sudheer1995/frontend:waste
       container_name: frontend
       depends_on: 
        - backend
