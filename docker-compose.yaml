@@ -20,7 +20,7 @@ services:
       #image: backend:v.10.0
       image: sudheer1995/backend:waste
       container_name: backend
-      command: sh -c "sleep 28 && node /opt/server/index.js" 
+      command: sh -c "sleep 48 && node /opt/server/index.js" 
       depends_on: 
        - mysql
 
